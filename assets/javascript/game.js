@@ -1,10 +1,12 @@
-var words = ["Motorcycle",
-            "Panhead",
-            "Scout",
-            "Bobber",
-            "Chief",
-            "Softtail",
-            "Indian",];
+var words = ["MOTORCYCLE",
+            "PANHEAD",
+            "SCOUT",
+            "BOBBER",
+            "CHIEF",
+            "SOFTTAIL",
+            "INDIAN",
+            "HARLEY",
+            "CHOPPER"];
 var guessedLetters = "";
 var currentWord;
 var guessCounter = 12;
@@ -77,11 +79,11 @@ initGame();
 // This function is run whenever the user presses a key.
 document.onkeyup = function(event) {
     // Get letter pressed
-    letter = event.key;
+    letter = event.key.toUpperCase();
 
     // Update Guessed Letters temp variable and update element
     // content to display the letters guessed so far.
-    guessedLetters = guessedLetters + letter.toUpperCase() + " ";
+    guessedLetters = guessedLetters + letter + "  ";
     lettersGuessedText.textContent = guessedLetters;
 
     // If the letter doesn't match any in the word, decrement
@@ -89,8 +91,8 @@ document.onkeyup = function(event) {
     // to display the number of guesses remaining.
     if (currentWord.includes(letter)) {
         for (var i = 0; i < wordLength; i++) {
-            if (currentWord.charAt(i).toUpperCase() === letter.toUpperCase()) {
-                solutionArray[i] = letter + " ";
+            if (currentWord.charAt(i) === letter) {
+                solutionArray[i] = letter;
             }
         }
 
@@ -101,7 +103,7 @@ document.onkeyup = function(event) {
         guessesLeftText.textContent = guessCounter;
     }
 
-    if (solution.toUpperCase() === currentWord.toUpperCase)
+    if (solution === currentWord)
     {
         winCounter++;
         winCountText.textContent = winCounter;
