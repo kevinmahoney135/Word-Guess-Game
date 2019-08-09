@@ -1,12 +1,12 @@
 var words = ["MOTORCYCLE",
-            "PANHEAD",
-            "SCOUT",
-            "BOBBER",
-            "CHIEF",
-            "SOFTTAIL",
-            "INDIAN",
-            "HARLEY",
-            "CHOPPER"];
+    "PANHEAD",
+    "SCOUT",
+    "BOBBER",
+    "CHIEF",
+    "SOFTTAIL",
+    "INDIAN",
+    "HARLEY",
+    "CHOPPER"];
 var guessedLetters = "";
 var currentWord;
 var guessCounter = 12;
@@ -29,7 +29,7 @@ function getRandomWord() {
 }
 
 // Function to initialize vairables and document element content.
-function initGame () {
+function initGame() {
     // Initialize variables
     solution = "";
     guessCounter = 12;
@@ -44,8 +44,7 @@ function initGame () {
 
     // Initialize the placeholders for the word's letters with
     // underscore characters.
-    for (var i = 0; i < wordLength; i++)
-    {
+    for (var i = 0; i < wordLength; i++) {
         solutionArray[i] = "_ ";
     }
 
@@ -58,12 +57,11 @@ function initGame () {
     lettersGuessedText.textContent = guessedLetters;
 }
 
-function buildSolution () {
+function buildSolution() {
     solution = "";
     solutionText = "";
 
-    for (var i = 0; i < wordLength; i++)
-    {
+    for (var i = 0; i < wordLength; i++) {
         solution = solution + solutionArray[i];
         console.log(solution);
         solutionText = solutionText + solutionArray[i] + "  ";
@@ -77,7 +75,7 @@ function buildSolution () {
 initGame();
 
 // This function is run whenever the user presses a key.
-document.onkeyup = function(event) {
+document.onkeyup = function (event) {
     // Get letter pressed
     letter = event.key.toUpperCase();
 
@@ -103,8 +101,7 @@ document.onkeyup = function(event) {
         guessesLeftText.textContent = guessCounter;
     }
 
-    if (solution === currentWord)
-    {
+    if (solution === currentWord) {
         winCounter++;
         winCountText.textContent = winCounter;
         initGame();

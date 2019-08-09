@@ -5,31 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Word Guess Game</title>
 </head>
 
 <body>
+    <div class="container">
+        <div class="media">
+            <img src="assets/images/yamaha-1653796_640.jpg" class="align-self-start mr-3" alt="...">
+            <div class="media-body">
+                <h1 class="mt-0">Motorcycle Hangman</h1>
+                <h4 class="display-5">Press any key to get started!</h4>
+                <hr class="my-4">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div>
+                    <h3 class="display-5">Wins</h3>
+                </div>
+                <br>
+                <div id="winCount"></div>
+                <br>
+                <hr class="my-4">
+                <div>
+                    <h3 class="display-5">Current Word</h3>
+                </div>
+                <br>
+                <div id="solutionWord"></div>
+                <br>
+                <hr class="my-4">
+                <div>
+                    <h3 class="display-5">Number of guesses remaining</h3>
+                </div>
+                <br>
+                <div id="guessesLeft"></div>
+                <br>
+                <hr class="my-4">
+                <div>
+                    <h3 class="display-5">Letters Already Guessed</h3>
+                </div>
+                <br>
+                <div id="lettersGuessed"></div>
+            </div>
+        </div>
 
-    <div>Press any key to get started!</div>
-    <br><hr>
-    <div>Wins</div>
-    <br>
-    <div id="winCount"></div>
-    <br><hr>
-    <div>Current Word</div>
-    <br>
-    <div id="solutionWord"></div>
-    <br><hr>
-    <div>Number of guesses remaining</div>
-    <br>
-    <div id="guessesLeft"></div>
-    <br><hr>
-    <div>Letters Already Guessed</div>
-    <br>
-    <div id="lettersGuessed"></div>
-
-    <script src="assets/javascript/game.js"></script>
+        <script src="assets/javascript/game.js"></script>
 
 </body>
 
