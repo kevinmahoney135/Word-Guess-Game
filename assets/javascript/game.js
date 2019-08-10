@@ -45,7 +45,7 @@ function initGame() {
     // Initialize the placeholders for the word's letters with
     // underscore characters.
     for (var i = 0; i < wordLength; i++) {
-        solutionArray[i] = "_ ";
+        solutionArray[i] = "_  ";
     }
 
     buildSolution();
@@ -64,7 +64,7 @@ function buildSolution() {
     for (var i = 0; i < wordLength; i++) {
         solution = solution + solutionArray[i];
         console.log(solution);
-        solutionText = solutionText + solutionArray[i] + "  ";
+        solutionText = solutionText + solutionArray[i] + "   ";
     }
 
     solutionWordText.textContent = solutionText;
@@ -81,7 +81,7 @@ document.onkeyup = function (event) {
 
     // Update Guessed Letters temp variable and update element
     // content to display the letters guessed so far.
-    guessedLetters = guessedLetters + letter + "  ";
+    guessedLetters = guessedLetters + letter + "   ";
     lettersGuessedText.textContent = guessedLetters;
 
     // If the letter doesn't match any in the word, decrement
